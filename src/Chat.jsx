@@ -28,19 +28,18 @@ function Chat() {
     };
 
     socket.emit("send_message", msgData);
-    setChat((prev) => [...prev, msgData]);
     setMessage("");
   };
 
   return (
-    <div className="max-w-md mx-auto h-screen flex flex-col bg-gray-100">
+    <div className="max-w-md  h-screen flex flex-col bg-gray-100">
       
-      {/* Header */}
+       {/* header */}
       <div className="bg-green-500 text-white text-center py-3 text-lg font-semibold shadow">
         Chat App
       </div>
 
-      {/* Chat messages */}
+      {/* chat messages */}
       <div className="flex-1 overflow-y-auto p-3 space-y-2">
         {chat.map((msg, i) => {
           const isMyMessage = msg.sender === userId;
@@ -71,7 +70,7 @@ function Chat() {
       </div>
 
       {/* Input box */}
-      <div className="flex p-2 bg-white border-t">
+      <div className="flex p-0 bg-white border-t m-b-6">
         <input
           value={message}
           onChange={(e) => setMessage(e.target.value)}
