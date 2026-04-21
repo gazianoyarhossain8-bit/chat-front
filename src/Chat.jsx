@@ -32,7 +32,7 @@ function Chat() {
   };
 
   return (
-    <div className="max-w-md  h-screen flex flex-col bg-gray-100">
+    <div className="max-w-md  h-screen flex flex-col bg-gray-300">
       
        {/* header */}
       <div className="bg-green-500 text-white text-center py-3 text-lg font-semibold shadow">
@@ -68,7 +68,6 @@ function Chat() {
           );
         })}
       </div>
-
       {/* Input box */}
       <div className="flex p-0 bg-white border-t m-b-6">
         <input
@@ -85,6 +84,8 @@ function Chat() {
           Send
         </button>
       </div>
+
+     
     </div>
   );
 }
